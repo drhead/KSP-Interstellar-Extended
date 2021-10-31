@@ -2583,7 +2583,7 @@ namespace FNPlugin.Reactors
 
         public void OnGUI()
         {
-            if (vessel == FlightGlobals.ActiveVessel && renderWindow)
+            if (renderWindow && vessel == FlightGlobals.ActiveVessel)
                 windowPosition = GUILayout.Window(_windowId, windowPosition, Window, Localizer.Format("#LOC_KSPIE_Reactor_reactorControlWindow"));
         }
 

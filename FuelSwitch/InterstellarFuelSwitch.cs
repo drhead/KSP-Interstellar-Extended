@@ -1420,7 +1420,7 @@ namespace InterstellarFuelSwitch
 
         public void OnGUI()
         {
-            if (vessel == FlightGlobals.ActiveVessel && renderWindow)
+            if (renderWindow && vessel == FlightGlobals.ActiveVessel)
                 _windowPosition = GUILayout.Window(_windowId, _windowPosition, Window, part.partInfo.title);
         }
 

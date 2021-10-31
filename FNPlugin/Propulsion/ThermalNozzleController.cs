@@ -2399,8 +2399,10 @@ namespace FNPlugin.Propulsion
 
         public void OnGUI()
         {
-            if (vessel == FlightGlobals.ActiveVessel && render_window)
-                _windowPosition = GUILayout.Window(_windowId, _windowPosition, Window, part.partInfo.title);
+
+                if (render_window && vessel == FlightGlobals.ActiveVessel)
+                    _windowPosition = GUILayout.Window(_windowId, _windowPosition, Window, part.partInfo.title);
+
         }
 
         private void Window(int windowId)
